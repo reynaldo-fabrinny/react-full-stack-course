@@ -1,0 +1,36 @@
+how to start the nodejs babel npx babel-node src/server.js
+
+
+after installing nodemon (like JRebel for NodeJs)
+starting the server now with auto deploy npx nodemon --exec babel-node src/server.js
+
+
+to create a build on the fron-end
+To create a production build, use npm run build.
+
+
+
+MongoDB Instructions
+
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+
+To run MongoDB (i.e. the mongod process) as a macOS service, issue the following:
+brew services start mongodb-community@4.4
+
+To stop a mongod running as a macOS service, use the following command as needed:
+brew services stop mongodb-community@4.4
+
+To run MongoDB (i.e. the mongod process) manually as a background process, issue the following:
+mongod --config /usr/local/etc/mongod.conf --fork
+
+To verify that MongoDB is running, search for mongod in your running processes:
+ps aux | grep -v grep | grep mongod
+
+Connect and Use MongoDB
+To begin using MongoDB, connect a mongo shell to the running instance.
+From a new terminal, issue the following:
+
+mongo
+
+
+db.articles.find().pretty()
